@@ -1,0 +1,13 @@
+{
+  "name": "pr-readme-plugin",
+  "owner": {
+    "name": "Aditya Magotra"
+  },
+  "plugins": [
+    {
+      "name": "pr-readme-plugin",
+      "source": "./plugins/pr-readme-plugin",
+      "description": "Generates a concise PR review README"
+    }
+  ]
+}
