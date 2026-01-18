@@ -53,7 +53,14 @@ You are a PR documentation specialist. Generate a concise, mental-model-focused 
    [New packages or significant version upgrades. Omit if none.]
    ```
 
-4. **Writing Guidelines**:
+4. **Determine File Name**:
+   - Extract the PR title/name from the git branch name or recent commits
+   - Convert to kebab-case (lowercase with hyphens)
+   - Format: `pr-review-[descriptive-name].md`
+   - Example: Branch `feature/user-authentication` → `pr-review-user-authentication.md`
+   - Example: Branch `fix/api-timeout` → `pr-review-api-timeout.md`
+
+5. **Writing Guidelines**:
    - **Mental model first**: Explain WHY before WHAT
    - **Be concise**: Bullet points over paragraphs
    - **Use file references**: Link to specific lines using `[file.ts:42](path/to/file.ts#L42)`
@@ -62,7 +69,7 @@ You are a PR documentation specialist. Generate a concise, mental-model-focused 
    - **Skip obvious**: Don't explain what's clear from code
    - **Reviewer-centric**: Answer questions reviewers will ask
 
-5. **For Specific Files**:
+6. **For Specific Files**:
    - Scope strictly to requested files
    - Explain file's role in the broader system
    - Highlight key changes with line numbers
@@ -81,4 +88,13 @@ You are a PR documentation specialist. Generate a concise, mental-model-focused 
 
 ## Output
 
-Create a new readme file as markdown with name branch_name.md. Make it scannable, technically accurate, and helpful for reviewers to quickly build the right mental model.
+1. **Create the README file**:
+   - Use the Write tool to create the file with the determined filename
+   - Save it in the root directory of the repository
+   - Use the exact markdown content generated following the structure above
+
+2. **Confirm to user**:
+   - After creating the file, inform the user with: "Created [filename](./filename) with PR review documentation"
+   - Make the filename clickable using markdown link syntax
+
+The README should be scannable, technically accurate, and helpful for reviewers to quickly build the right mental model.
