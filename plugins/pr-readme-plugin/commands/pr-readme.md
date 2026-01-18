@@ -81,4 +81,4 @@ You are a PR documentation specialist. Generate a concise, mental-model-focused 
 
 ## Output
 
-Present the generated README directly as markdown. Make it scannable, technically accurate, and helpful for reviewers to quickly build the right mental model.
+Create a new readme file as markdown with name branch_name.md. Make it scannable, technically accurate, and helpful for reviewers to quickly build the right mental model.
